@@ -1,0 +1,254 @@
+/* Estilos Mobile-First */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: #000000;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 10px;
+    padding: 10px;
+}
+
+header {
+    grid-area: header;
+    background: #000000;
+    border: 2px solid #ffffff;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow:  8px 6px 0px -4px rgb(255, 255, 255);
+}
+
+header img {
+    max-width: 140px;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    
+}
+
+.itemNav {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid #080808;
+}
+
+.itemNav:hover {
+    background: rgb(7, 7, 7);
+    color: #ffffff;
+    border: 2px solid #fff;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+        "section1"
+        "carrossel";
+    gap: 10px;
+    
+}
+
+.section1 {
+    grid-area: section1;
+    background: #000000;
+    padding: 10px;
+    color: #fff;
+    border: 2px solid #ffffff;
+    box-shadow:  8px 7px 0px -4px rgb(255, 255, 255);
+}
+
+.divLink {
+    display: flex;
+    justify-content: space-between;
+}
+
+.itemNav2 {
+    background: #fff;
+    color: #000000;
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid #ffffff; 
+}
+
+.itemNav2:hover {
+    background: rgb(0, 0, 0);
+    color: #fdfafa;
+    border: 2px solid #fff;
+}
+
+.carrossel {
+    grid-area: carrossel;
+    background: #000000;
+    padding: 10px;
+    color: #fff;
+    border: 2px solid #ffffff;
+    box-shadow:  8px 7px 0px -4px rgb(255, 255, 255);
+}
+
+footer {
+    grid-area: footer;
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 2px;
+    border: 2px solid #ffffff;
+    box-shadow:  8px 7px 0px -4px rgb(255, 255, 255);
+}
+
+/* Swiper styles */
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    position: relative;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    color: rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+    padding: 8px;
+}
+
+.imgProject {
+    width: 820px;
+    height: 490px;
+}
+
+.swiper {
+    width: 820px;
+    height: 490px;
+    border: 2px solid #ffffff;
+}
+
+.full-screen-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .container {
+        grid-template-areas:
+            "header header"
+            "main main"
+            "footer footer";
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        text-align: left;
+        padding: 20px;
+    }
+
+    nav ul {
+        justify-content: flex-end;
+    }
+
+    main {
+        grid-template-areas:
+            "section1 carrossel";
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+    }
+}
