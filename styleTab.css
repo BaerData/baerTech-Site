@@ -67,7 +67,7 @@ main {
 
 .section1 {
     grid-area: section1;
-    background: #000000;
+    background: #ffffff;
     padding: 10px;
     color: #fff;
     border: 2px solid #ffffff;
@@ -152,7 +152,7 @@ footer {
 
 .swiper {
     width: 800px;
-    height: 500px;
+    height: 490px;
     border: 2px solid #ffffff;
     
 }
