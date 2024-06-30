@@ -147,13 +147,14 @@ footer {
 
 .imgProject {
     width: 800px;
-    height: 460px;
+    height: 480px;
 }
 
 .swiper {
     width: 800px;
-    height: 460px;
+    height: 500px;
     border: 2px solid #ffffff;
+    
 }
 
 .full-screen-btn {
