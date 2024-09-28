@@ -1,10 +1,15 @@
 /* Estilos Mobile-First */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background: #000000;
+    background: #151515;
+    
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    
 }
 
 .container {
@@ -15,26 +20,25 @@ body {
         "footer";
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
-    gap: 10px;
+    
     padding: 10px;
 }
 
 header {
     grid-area: header;
-    background: #000000;
-    border: 2px solid #3f3f3f;
-    color: #fff;
+    background: #151515;
+    border: 1px solid #3f3f3f;
+    color: #fdfdf9;
     padding: 10px;
-    text-align: center;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    box-shadow:  8px 6px 0px -4px rgb(71, 71, 71);
+    justify-content: space-between;
+    align-items: center;
+    
 }
 
 header img {
-    max-width: 140px;
-    margin-bottom: 10px;
+    max-width: 100px;
+    
 }
 
 nav ul {
@@ -46,16 +50,20 @@ nav ul {
 }
 
 .itemNav {
-    color: #fff;
+    color:#fdfdf9;
     text-decoration: none;
     padding: 10px;
-    border: 2px solid #3f3f3f;
+    border: 1px solid #3f3f3f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 7px;
 }
 
 .itemNav:hover {
-    background: rgb(255, 255, 255);
-    color: #000000;
-    border: 2px solid #3f3f3f;
+    background: #fdfdf9;
+    color: #151515;
+    border: 1px solid #3f3f3f;
 }
 
 main {
@@ -64,55 +72,64 @@ main {
     grid-template-areas:
         "section1"
         "carrossel";
-    gap: 10px;
+   
     
 }
 
 .section1 {
     grid-area: section1;
-    background: #000000;
-    padding: 10px;
-    color: #fff;
-    border: 2px solid #3f3f3f;
-    box-shadow:  8px 7px 0px -4px rgb(71, 71, 71);
+    background: #151515;
+    padding: 23px;
+    color:#fdfdf9;
+    border: 1px solid #3f3f3f;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+
 
 .divLink {
     display: flex;
     justify-content: space-between;
+    
 }
 
 .itemNav2 {
-    background: #fff;
-    color: #000000;
+    
+    color: #fdfdf9;
     text-decoration: none;
     padding: 10px;
-    border: 2px solid #3f3f3f; 
+    border: 1px solid #3f3f3f; 
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .itemNav2:hover {
-    background: rgb(0, 0, 0);
-    color: #fdfafa;
-    border: 2px solid #3f3f3f;
+    background: #fdfafa;
+    color: #3f3f3f;
+    border: 1px solid #3f3f3f;
 }
+
+
 
 .carrossel {
     grid-area: carrossel;
-    background: #000000;
+    background: #151515;
     padding: 10px;
-    color: #fff;
-    border: 2px solid #3f3f3f;
-    box-shadow:  8px 7px 0px -4px rgb(71, 71, 71);
+    color: #fdfdf9;
+    border: 1px solid #3f3f3f;
+    
 }
 
 footer {
     grid-area: footer;
-    background: #000000;
-    color: #ffffff;
+    background: #151515;
+    color: #fdfdf9;
     text-align: center;
     padding: 2px;
-    border: 2px solid #3f3f3f;
-    box-shadow:  8px 7px 0px -4px rgb(71, 71, 71);
+    border: 1px solid #3f3f3f;
+    
 }
 
 /* Swiper styles */
@@ -123,8 +140,8 @@ footer {
 
 .swiper-slide {
     text-align: center;
-    font-size: 18px;
-    background: #fff;
+    font-size: 11px;
+    background: #fdfdf9;
     position: relative;
 
     /* Center slide text vertically */
@@ -143,9 +160,10 @@ footer {
 }
 
 .swiper-button-prev, .swiper-button-next {
-    color: rgb(255, 255, 255);
-    background: rgb(0, 0, 0);
-    padding: 8px;
+    color: #fdfdf9;
+    background: #151515;
+    padding: 13px;
+    border: 1px solid #3f3f3f;
 }
 
 .imgProject {
@@ -164,7 +182,7 @@ footer {
     top: 10px;
     right: 10px;
     background: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    color: #fdfdf9;
     border: none;
     padding: 5px;
     cursor: pointer;
@@ -243,7 +261,7 @@ footer {
     header {
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
     }
 
     nav ul {
