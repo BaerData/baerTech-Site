@@ -6,23 +6,41 @@
     <title>Baer Tech</title>
     <link rel="shortcut icon" href="img/iconPage.png" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    
     <link rel="stylesheet" href="style.css">
     <link rel="import" href="powerbi.html">
     <link rel="import" href="excel.html">
     <link rel="import" href="email.js">
+    <style>
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #151515;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .loading-screen p {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
+    <div id="loadingScreen" class="loading-screen">
+        <p><img src="img/iconlogo.svg" alt=""></p>
+    </div>
+
     <div class="container">
         <header>
             <img src="img/iconlogo.svg" alt="Baer Tech">
-            
             <nav>
                 <ul>
-                    
-                    
-                    <li><a href="powerbi.html" class="itemNav">Power BI Dashboard <i class="fa-solid fa-chart-pie" style="font-size: 18px;"></i></a> </li>
-                    
+                    <li><a href="powerbi.html" class="itemNav">Power BI Dashboard <i class="fa-solid fa-chart-pie" style="font-size: 18px;"></i></a></li>
                 </ul>
             </nav>
         </header>
@@ -31,18 +49,16 @@
                 <h2>About</h2>
                 <p>Baer Tech is a small company whose goal is to translate your data and transform it into simple dashboards with excellence.</p>
                 <p>Send us an email and we'll arrange a customization: <br><p style="font-style: italic; font-weight: bold;"> jonathanbaeremails@gmail.com</p>
-                     </p>
-                <div class="divLink"><a href="https://www.linkedin.com/company/baer-tech" class="itemNav2">Baer Tech <i class="fa-brands fa-linkedin" style="font-size: 20px;"></i></a><a href="https://www.linkedin.com/in/jonathanbaer/" class="itemNav2">Personal <i class="fa-brands fa-linkedin" style="font-size: 20px;"></i></a></div>
-        
-    </form>
+                </p>
+                <div class="divLink">
+                    <a href="https://www.linkedin.com/company/baer-tech" class="itemNav2">Baer Tech <i class="fa-brands fa-linkedin" style="font-size: 20px;"></i></a>
+                    <a href="https://www.linkedin.com/in/jonathanbaer/" class="itemNav2">Personal <i class="fa-brands fa-linkedin" style="font-size: 20px;"></i></a>
+                </div>
             </section>
-            <!-- Slider main container -->
             <section class="carrossel">
                 <h2>Excel</h2>
                 <div class="swiper">
-                    <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
-                        <!-- Slides with images and full screen button -->
                         <div class="swiper-slide">
                             <img src="img/project7.png" alt="Projeto 1" class="imgProject">
                             <button class="full-screen-btn" onclick="expandImage(this)"><i class="fa-solid fa-expand"></i></button>
@@ -72,9 +88,7 @@
                             <button class="full-screen-btn" onclick="expandImage(this)"><i class="fa-solid fa-expand"></i></button>
                         </div>
                     </div>
-                    <!-- If we need pagination -->
                     <div class="swiper-pagination"></div>
-                    <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
                 </div>
@@ -93,15 +107,16 @@
     <script>
         // Função para mudar a URL
         function changeURL() {
-          const currentURL = window.location.href;
-          const newURL = currentURL.replace('/index.html', '/'); // Troca a extensão
-          window.history.pushState({ path: newURL }, '', newURL); // Atualiza a URL sem recarregar a página
+            const currentURL = window.location.href;
+            const newURL = currentURL.replace('/index.html', '/'); // Troca a extensão
+            window.history.pushState({ path: newURL }, '', newURL); // Atualiza a URL sem recarregar a página
         }
         
         window.onload = function() {
-          changeURL(); // Executa a mudança da URL ao carregar a página
-        }
-        </script>
+            changeURL(); // Executa a mudança da URL ao carregar a página
+            document.getElementById("loadingScreen").style.display = "none"; // Esconde a tela de carregamento
+        };
+    </script>
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/1910d1b4ce.js" crossorigin="anonymous"></script>
 </body>
