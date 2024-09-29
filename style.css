@@ -252,6 +252,7 @@ footer {
     }
 }
 
+
 @media (min-width: 1024px) {
     .container {
         max-width: 1200px;
@@ -270,3 +271,67 @@ footer {
         gap: 15px;
     }
 }
+
+/* ... (existing code) ... */
+
+@media (max-width: 450px) {
+    /* Specific styles for smartphones below 600px */
+    body {
+        font-size: 14px;
+        width: 400px;
+    }
+
+    .container {
+        width: 400px;
+       
+    }
+    .section1 {
+        width: 400px;
+    }
+
+    header {
+        padding: 5px;
+        width: 400px;
+    }
+
+    
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 360px;
+    }
+    .section1 {
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 360px;
+        
+    }
+
+    .carrossel {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 386px;
+    }
+
+    .swiper {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 386px; 
+        height: 240px;
+    }
+
+    .imgProject {
+        width: 386px;
+        height: 245px;
+    }
+
+    footer {
+        width: 400px;
+    }
+    
+
+    
+}
+
+/* ... (existing media queries) ... */
