@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="import" href="powerbi.html">
     <link rel="import" href="excel.html">
+    <link rel="import" href="email.js">
 </head>
 <body>
     <div class="container">
@@ -32,6 +33,8 @@
                 <p>Send us an email and we'll arrange a customization: <br><p style="font-style: italic; font-weight: bold;"> jonathanbaeremails@gmail.com</p>
                      </p>
                 <div class="divLink"><a href="https://www.linkedin.com/company/baer-tech" class="itemNav2">Baer Tech <i class="fa-brands fa-linkedin" style="font-size: 20px;"></i></a><a href="https://www.linkedin.com/in/jonathanbaer/" class="itemNav2">Personal <i class="fa-brands fa-linkedin" style="font-size: 20px;"></i></a></div>
+        
+    </form>
             </section>
             <!-- Slider main container -->
             <section class="carrossel">
@@ -86,6 +89,19 @@
         <img class="modal-content" id="modal-img">
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="//code.jivosite.com/widget/07qxhMDuM8" async></script>
+    <script>
+        // Função para mudar a URL
+        function changeURL() {
+          const currentURL = window.location.href;
+          const newURL = currentURL.replace('/index.html', '/'); // Troca a extensão
+          window.history.pushState({ path: newURL }, '', newURL); // Atualiza a URL sem recarregar a página
+        }
+        
+        window.onload = function() {
+          changeURL(); // Executa a mudança da URL ao carregar a página
+        }
+        </script>
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/1910d1b4ce.js" crossorigin="anonymous"></script>
 </body>
